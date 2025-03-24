@@ -13,7 +13,7 @@ type King = Character & {
 };
 
 type Adviser = Character & {
-  advisesTo: string;
+  advisesTo: King | Fighter | Adviser | Squire;
   phrase: "I don't know why, but I think I'm going to die soon";
 };
 
@@ -21,4 +21,10 @@ type Fighter = Character & {
   weapon: string;
   dexterity: number;
   phrase: "First I punch, then I ask";
+};
+
+type Squire = Character & {
+  servesTo: Fighter;
+  ballism: number;
+  phrase: "I am a looser";
 };
