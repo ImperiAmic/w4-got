@@ -22,3 +22,9 @@ export type Fighter = Character & {
   dexterity: number;
   phrase: "First I punch, then I ask";
 };
+
+type Squire = Character & {
+  servesTo: Fighter;
+  ballism: number;
+  phrase: "I am a looser";
+};
