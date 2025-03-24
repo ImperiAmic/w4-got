@@ -23,8 +23,8 @@ export type Fighter = Character & {
   phrase: "First I punch, then I ask";
 };
 
-type Squire = Character & {
-  servesTo: Fighter;
+export type Squire = Character & {
+  servesTo: string;
   ballism: number;
   phrase: "I am a looser";
 };
