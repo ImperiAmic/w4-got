@@ -1,0 +1,53 @@
+import { Character, Fighter, King, Adviser } from "../types.js";
+
+const characters: (King | Adviser | Fighter | Character)[] = [
+  {
+    name: "Joffrey",
+    lastName: "Baratheon",
+    age: 19,
+    portraitUrl: "url",
+    portraitDescription: "Portrait of Joffrey Baratheon",
+    isAlive: true,
+    yearsOfReign: 2,
+    phrase: "You are all going to die",
+  },
+  {
+    name: "Jaime",
+    lastName: "Lannister",
+    age: 44,
+    portraitUrl: "url",
+    portraitDescription: "Portrait of Jaime Lannister",
+    isAlive: true,
+    weapon: "Oathkeeper",
+    dexterity: 7,
+    phrase: "First I punch, then I ask",
+  },
+  {
+    name: "Daenerys",
+    lastName: "Targaryen",
+    age: 24,
+    portraitUrl: "url",
+    portraitDescription: "Portrait of Daenerys Targaryen",
+    isAlive: true,
+    weapon: "Drogon, Rhaegal, and Viserion",
+    dexterity: 5,
+    phrase: "First I punch, then I ask",
+  },
+  {
+    name: "Tyrion",
+    lastName: "Lannister",
+    age: 40,
+    portraitUrl: "url",
+    portraitDescription: "Portrait of Tyrion Lannister",
+    isAlive: true,
+    advisesTo: "Daenerys Targaryen",
+  },
+  {
+    name: "Bronn",
+    lastName: "Blackwater",
+    age: 35,
+    portraitUrl: "url",
+    portraitDescription: "Portrait of Bronn Blackwater",
+    isAlive: true,
+  },
+];
