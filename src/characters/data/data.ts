@@ -1,6 +1,6 @@
 import { Fighter, King, Adviser, Squire } from "../types.js";
 
-const characters: (King | Adviser | Fighter | Squire)[] = [
+export const characters: (King | Adviser | Fighter | Squire)[] = [
   {
     name: "Joffrey",
     lastName: "Baratheon",
