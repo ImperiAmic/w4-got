@@ -1,0 +1,21 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Cinzel Decorative", "Courier New", Courier, monospace;
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  margin: 0 auto;
+}
+
+.main-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
