@@ -5,9 +5,9 @@ describe("Given the App component", () => {
     test("Then it should show a header", () => {
       const screen = document.createElement("div");
 
-      const app = getApp();
+      const App = getApp();
 
-      screen.appendChild(app);
+      screen.appendChild(App);
 
       const header = screen.querySelector("header");
       expect(header).not.toBeNull();
