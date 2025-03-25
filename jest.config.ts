@@ -4,6 +4,7 @@ const config: JestConfigWithTsJest = {
   verbose: true,
   rootDir: "src",
   testEnvironment: "jsdom",
+  resolver: "ts-jest-resolver",
   ...createDefaultPreset(),
 };
 

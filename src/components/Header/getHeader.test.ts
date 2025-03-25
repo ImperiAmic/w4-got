@@ -1,4 +1,4 @@
-import getHeader from "../getHeader";
+import getHeader from "./getHeader";
 
 describe("Given the Header component", () => {
   describe("When it renders", () => {
