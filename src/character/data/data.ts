@@ -1,7 +1,7 @@
-import { Adviser } from "../adviser/types";
-import { Fighter } from "../fighter/types";
-import { King } from "../king/types";
-import { Squire } from "../squire/types";
+import { Adviser } from "../../adviser/types";
+import { Fighter } from "../../fighter/types";
+import { King } from "../../king/types";
+import { Squire } from "../../squire/types";
 
 export const characters: (King | Adviser | Fighter | Squire)[] = [
   {

@@ -1,4 +1,4 @@
-import { Character } from "../types";
+import { Character } from "../character/types";
 
 export type Adviser = Character & {
   advisesTo: string;
