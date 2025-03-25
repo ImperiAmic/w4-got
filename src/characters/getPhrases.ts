@@ -1,7 +1,7 @@
 import { Adviser, Fighter, King, Squire } from "./types.js";
 
 const getPhrases = (
-  characters: (King | Adviser | Fighter | Squire)[]
+  characters: (King | Adviser | Fighter | Squire)[],
 ): string[] => {
   const phrases: string[] = [];
 
