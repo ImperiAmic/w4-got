@@ -1,4 +1,4 @@
-import { Adviser, Fighter, King, Squire } from "../../types";
+import { Adviser, Fighter, King, Squire } from "./types";
 import getPhrases from "./getPhrases";
 
 describe("Given the getPhrase function", () => {

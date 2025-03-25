@@ -1,4 +1,4 @@
-import { Adviser, Fighter, King, Squire } from "../../types.js";
+import { Adviser, Fighter, King, Squire } from "./types.js";
 
 const getPhrases = (
   characters: (King | Adviser | Fighter | Squire)[]
