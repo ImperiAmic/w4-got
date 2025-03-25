@@ -4,12 +4,12 @@ import { King } from "../king/types";
 import { Squire } from "../squire/types";
 
 const getPhrases = (
-  characters: (King | Adviser | Fighter | Squire)[]
+  characters: (King | Adviser | Fighter | Squire)[],
 ): string[] => {
   const phrases: string[] = [];
-  characters.forEach((character) => {
-    phrases.push(character.phrase);
-  });
+
+  characters.map((character) => phrases.push(character.phrase));
+
   return phrases;
 };
 
