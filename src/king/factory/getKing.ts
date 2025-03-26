@@ -1,5 +1,6 @@
+import getCharacterToSpeak from "../../character/getCharacterToSpeak.js";
 import { Character } from "../../character/types.js";
-import King from "../types.js";
+import { King } from "../types.js";
 
 const getKing = (character: Character, yearsOfReign: number): King => {
   const king: King = {
@@ -12,7 +13,7 @@ const getKing = (character: Character, yearsOfReign: number): King => {
     portraitDescription: character.portraitDescription,
     yearsOfReign,
     phrase: "You are all going to die",
-    speak: "",
+    speak: () => getCharacterToSpeak(king.phrase),
   };
 
   return king;

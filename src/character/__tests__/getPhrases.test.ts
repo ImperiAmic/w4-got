@@ -1,8 +1,8 @@
-import { Adviser } from "../adviser/types";
-import { Fighter } from "../fighter/types";
-import King from "../king/types";
-import { Squire } from "../squire/types";
-import getPhrases from "./getPhrases";
+import { Adviser } from "../../adviser/types";
+import { Fighter } from "../../fighter/types";
+import { King } from "../../king/types";
+import { Squire } from "../../squire/types";
+import getPhrases from "../getPhrases";
 
 describe("Given the getPhrase function", () => {
   const felipe: King = {
@@ -15,7 +15,9 @@ describe("Given the getPhrase function", () => {
     die: () => {},
     yearsOfReign: 0,
     phrase: "You are all going to die",
-    speak: "",
+    speak: () => {
+      return "";
+    },
   };
 
   const joseMariaAznar: Adviser = {
@@ -41,6 +43,9 @@ describe("Given the getPhrase function", () => {
     weapon: "",
     dexterity: 0,
     phrase: "First I punch, then I ask",
+    speak: () => {
+      return "";
+    },
   };
 
   const albertRivera: Squire = {

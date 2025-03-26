@@ -1,7 +1,7 @@
-import { Adviser } from "../adviser/types";
-import { Fighter } from "../fighter/types";
-import King from "../king/types";
-import { Squire } from "../squire/types";
+import { Adviser } from "../adviser/types.js";
+import { Fighter } from "../fighter/types.js";
+import { King } from "../king/types.js";
+import { Squire } from "../squire/types.js";
 
 export type Character = {
   name: string;
@@ -18,4 +18,6 @@ export type Portrait = {
   description: string;
 };
 
-export type CharacterType = Adviser | Fighter | King | Squire;
+export type CharacterType = King | Fighter | Squire | Adviser;
+
+export type Range = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;

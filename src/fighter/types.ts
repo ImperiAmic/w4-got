@@ -1,7 +1,8 @@
-import { Character } from "../character/types";
+import { Character, Range } from "../character/types";
 
 export type Fighter = Character & {
   weapon: string;
-  dexterity: number;
+  dexterity: Range;
   phrase: "First I punch, then I ask";
+  speak: () => string;
 };
