@@ -1,5 +1,5 @@
-import { Character } from "../../character/types.js";
-import getKing from "./getKing.js";
+import { Character } from "../../character/types";
+import getKing from "./getKing";
 
 describe("Given the getKing function", () => {
   describe("When it receives Felipe IV character and 19 years of reign", () => {
