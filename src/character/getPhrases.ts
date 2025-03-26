@@ -1,6 +1,6 @@
-import { Characters } from "./types";
+import { CharacterType } from "./types";
 
-const getPhrases = (characters: Characters[]): string[] => {
+const getPhrases = (characters: CharacterType[]): string[] => {
   const phrases: string[] = [];
 
   characters.map((character) => phrases.push(character.phrase));
