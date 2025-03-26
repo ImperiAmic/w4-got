@@ -72,7 +72,7 @@ describe("Given the getPhrase function", () => {
     });
   });
 
-  describe("When it receives a King, an Adviser, a Fighter and a Squire", () => {
+  describe("When it receives Felipe, Jose María Aznar, Jimenez Losantos and Albert Ribera characters", () => {
     test("Then it should return the phrase 'You are all going to die' in the first position", () => {
       const characters = [
         felipe,
