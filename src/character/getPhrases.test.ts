@@ -1,6 +1,6 @@
 import { Adviser } from "../adviser/types";
 import { Fighter } from "../fighter/types";
-import { King } from "../king/types";
+import King from "../king/types";
 import { Squire } from "../squire/types";
 import getPhrases from "./getPhrases";
 
@@ -12,8 +12,10 @@ describe("Given the getPhrase function", () => {
     portraitUrl: "",
     portraitDescription: "",
     isAlive: true,
+    die: () => {},
     yearsOfReign: 0,
     phrase: "You are all going to die",
+    speak: "",
   };
 
   const joseMariaAznar: Adviser = {
@@ -23,6 +25,7 @@ describe("Given the getPhrase function", () => {
     portraitUrl: "",
     portraitDescription: "",
     isAlive: true,
+    die: () => {},
     advisesTo: "",
     phrase: "I don't know why, but I think I'm going to die soon",
   };
@@ -34,6 +37,7 @@ describe("Given the getPhrase function", () => {
     portraitUrl: "",
     portraitDescription: "",
     isAlive: true,
+    die: () => {},
     weapon: "",
     dexterity: 0,
     phrase: "First I punch, then I ask",
@@ -46,6 +50,7 @@ describe("Given the getPhrase function", () => {
     portraitUrl: "",
     portraitDescription: "",
     isAlive: true,
+    die: () => {},
     servesTo: "",
     ballism: 0,
     phrase: "I am a looser",

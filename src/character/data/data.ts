@@ -1,6 +1,6 @@
 import { Adviser } from "../../adviser/types";
 import { Fighter } from "../../fighter/types";
-import { King } from "../../king/types";
+import King from "../../king/types";
 import { Squire } from "../../squire/types";
 
 export const characters: (King | Adviser | Fighter | Squire)[] = [
@@ -11,8 +11,10 @@ export const characters: (King | Adviser | Fighter | Squire)[] = [
     portraitUrl: "/images/joffrey-baratheon.webp",
     portraitDescription: "Portrait of Joffrey Baratheon",
     isAlive: true,
+    die: () => {},
     yearsOfReign: 2,
     phrase: "You are all going to die",
+    speak: () => {},
   },
   {
     name: "Jaime",
@@ -21,6 +23,7 @@ export const characters: (King | Adviser | Fighter | Squire)[] = [
     portraitUrl: "/images/jaime-lannister.webp",
     portraitDescription: "Portrait of Jaime Lannister",
     isAlive: true,
+    die: () => {},
     weapon: "Oathkeeper",
     dexterity: 7,
     phrase: "First I punch, then I ask",
@@ -32,6 +35,7 @@ export const characters: (King | Adviser | Fighter | Squire)[] = [
     portraitUrl: "/images/daenerys-targaryen.webp",
     portraitDescription: "Portrait of Daenerys Targaryen",
     isAlive: true,
+    die: () => {},
     weapon: "Drogon, Rhaegal, and Viserion",
     dexterity: 5,
     phrase: "First I punch, then I ask",
@@ -43,6 +47,7 @@ export const characters: (King | Adviser | Fighter | Squire)[] = [
     portraitUrl: "/images/tyrion-lannister.webp",
     portraitDescription: "Portrait of Tyrion Lannister",
     isAlive: true,
+    die: () => {},
     advisesTo: "Daenerys Targaryen",
     phrase: "I don't know why, but I think I'm going to die soon",
   },
@@ -53,6 +58,7 @@ export const characters: (King | Adviser | Fighter | Squire)[] = [
     portraitUrl: "/images/bronn.webp",
     portraitDescription: "Portrait of Bronn Blackwater",
     isAlive: true,
+    die: () => {},
     servesTo: "Jaime Lannister",
     ballism: 10,
     phrase: "I am a looser",

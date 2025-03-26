@@ -5,4 +5,10 @@ export type Character = {
   isAlive: boolean;
   portraitUrl: string;
   portraitDescription: string;
+  die: () => void;
+};
+
+export type Portrait = {
+  url: string;
+  description: string;
 };
