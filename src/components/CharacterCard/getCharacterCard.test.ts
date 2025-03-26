@@ -1,23 +1,24 @@
-import { CharacterType } from "../../character/types";
+import { King } from "../../king/types";
+import getKing from "../../king/factory/getKing";
 import getCharacterCard from "./getCharacterCard";
 
 describe("Given the CharacterCard component", () => {
   describe("When it renders the Felipe character", () => {
-    test("Then it should show the Felipe character name and last name inside a card", () => {
+    test("Then it should show the Felipe character name and last name inside a character card", () => {
       const screen = document.createElement("div");
-      const felipe: CharacterType = {
-        name: "Felipe",
-        lastName: "Sesto",
-        age: 0,
-        isAlive: true,
-        die: () => {},
-        yearsOfReign: 0,
-        phrase: "You are all going to die",
-        portraitUrl: "",
-        portraitDescription: "",
-        speak: "",
-      };
-      const expectedCardTitle = "Felipe Sesto";
+      const felipe: King = getKing(
+        {
+          name: "Felipe",
+          lastName: "Sesto",
+          age: 0,
+          isAlive: false,
+          die: () => {},
+          portraitUrl: "",
+          portraitDescription: "",
+        },
+        0,
+      );
+      const expectedCardTitle = `${felipe.name} ${felipe.lastName}`;
 
       const CharacterCard = getCharacterCard(felipe);
 
