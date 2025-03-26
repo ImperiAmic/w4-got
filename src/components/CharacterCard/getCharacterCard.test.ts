@@ -25,6 +25,7 @@ describe("Given the CharacterCard component", () => {
 
       const CardArticle = screen.querySelector("li");
       const CardTitle = screen.querySelector("h2");
+
       expect(CardArticle).not.toBeNull();
       expect(CharacterCard).not.toBeNull();
       expect(CardTitle?.textContent).toBe(expectedCardTitle);
