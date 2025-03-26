@@ -1,6 +1,6 @@
 import getCharacterToSpeak from "../../character/getCharacterToSpeak.js";
 import { Character } from "../../character/types.js";
-import King from "../types.js";
+import { King } from "../types.js";
 
 const getKing = (character: Character, yearsOfReign: number): King => {
   const king: King = {

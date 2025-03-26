@@ -1,7 +1,7 @@
-import { Adviser } from "../../adviser/types";
-import { Fighter } from "../../fighter/types";
-import King from "../../king/types";
-import { Squire } from "../../squire/types";
+import { Adviser } from "../../adviser/types.js";
+import { Fighter } from "../../fighter/types.js";
+import { King } from "../../king/types.js";
+import { Squire } from "../../squire/types.js";
 
 export const characters: (King | Adviser | Fighter | Squire)[] = [
   {
@@ -29,6 +29,9 @@ export const characters: (King | Adviser | Fighter | Squire)[] = [
     weapon: "Oathkeeper",
     dexterity: 7,
     phrase: "First I punch, then I ask",
+    speak: () => {
+      return "";
+    },
   },
   {
     name: "Daenerys",
@@ -41,6 +44,9 @@ export const characters: (King | Adviser | Fighter | Squire)[] = [
     weapon: "Drogon, Rhaegal, and Viserion",
     dexterity: 5,
     phrase: "First I punch, then I ask",
+    speak: () => {
+      return "";
+    },
   },
   {
     name: "Tyrion",
