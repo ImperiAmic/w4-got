@@ -49,17 +49,6 @@ export const characters: (King | Adviser | Fighter | Squire)[] = [
     },
   },
   {
-    name: "Tyrion",
-    lastName: "Lannister",
-    age: 40,
-    portraitUrl: "/images/tyrion-lannister.webp",
-    portraitDescription: "Portrait of Tyrion Lannister",
-    isAlive: true,
-    die: () => {},
-    advisesTo: "Daenerys Targaryen",
-    phrase: "I don't know why, but I think I'm going to die soon",
-  },
-  {
     name: "Bronn",
     lastName: "Blackwater",
     age: 35,
