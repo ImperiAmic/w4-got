@@ -59,9 +59,12 @@ describe("Given the getPhrase function", () => {
     portraitDescription: "",
     isAlive: true,
     die: () => {},
-    servesTo: "",
+    servesTo: jimenezLosantos,
     ballism: 0,
     phrase: "I am a looser",
+    speak: () => {
+      return "";
+    },
   };
 
   describe("When it receives Felipe, Jose María Aznar, Jimenez Losantos and Albert Ribera characters", () => {
