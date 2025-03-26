@@ -1,11 +1,11 @@
 import getCharacterToSpeak from "../../character/getCharacterToSpeak.js";
-import { Character, Range } from "../../character/types.js";
+import { Character, NumberRange } from "../../character/types.js";
 import { Fighter } from "../types.js";
 
 const getFighter = (
   characterData: Character,
   weapon: string,
-  dexterity: Range,
+  dexterity: NumberRange,
 ): Fighter => {
   const fighter: Fighter = {
     name: characterData.name,

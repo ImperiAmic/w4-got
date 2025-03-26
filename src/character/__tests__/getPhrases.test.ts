@@ -28,8 +28,11 @@ describe("Given the getPhrase function", () => {
     portraitDescription: "",
     isAlive: true,
     die: () => {},
-    advisesTo: "",
+    advisesTo: felipe,
     phrase: "I don't know why, but I think I'm going to die soon",
+    speak: () => {
+      return "";
+    },
   };
 
   const jimenezLosantos: Fighter = {

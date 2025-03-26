@@ -12,7 +12,8 @@ describe("Given the getFighter function", () => {
     };
 
     const kaladin = getCharacter(fullName, age, kaladinPortrait);
-    describe("With the weapom Sylphrena and 10 dexerity", () => {
+
+    describe("With the weapon Sylphrena and 10 dexerity", () => {
       const weapon = "Sylphrena";
       const dexerity = 10;
 
