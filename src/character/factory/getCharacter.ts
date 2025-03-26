@@ -1,4 +1,4 @@
-import { killCharacter } from "../killCharacter.js";
+import killCharacter from "../killCharacter.js";
 import { Character } from "../types.js";
 import { Portrait } from "../types.js";
 

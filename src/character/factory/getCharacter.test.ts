@@ -37,7 +37,7 @@ describe("Given the getCharacter function", () => {
       expect(actualAge).toBe(expectAge);
     });
 
-    test("Then it should return a character alive", () => {
+    test("Then it should return an alive character", () => {
       const batman = getCharacter(fullName, age, batmanPortrait);
       const isBatmanAlive = batman.isAlive;
 
