@@ -14,7 +14,9 @@ export const characters: (King | Adviser | Fighter | Squire)[] = [
     die: () => {},
     yearsOfReign: 2,
     phrase: "You are all going to die",
-    speak: () => {},
+    speak: () => {
+      return "";
+    },
   },
   {
     name: "Jaime",

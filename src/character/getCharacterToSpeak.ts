@@ -1,9 +1,5 @@
-import { CharacterType } from "./types.js";
-
-const getCharacterToSpeak = (charcter: CharacterType): string => {
-  const characterPhrase = charcter.phrase;
-
-  return characterPhrase;
+const getCharacterToSpeak = (phrase: string): string => {
+  return phrase;
 };
 
 export default getCharacterToSpeak;
