@@ -1,8 +1,14 @@
-const getCharactersList = (): HTMLElement => {
-  const characters = document.createElement("ul");
-  characters.className = "characters";
+import { characters } from "../../character/data/data.js";
+import getCharacterCard from "../CharacterCard/getCharacterCard.js";
 
-  return characters;
+const getCharactersList = (): HTMLElement => {
+  const charactersElement = document.createElement("ul");
+  charactersElement.className = "characters";
+
+  const CharacterCard = getCharacterCard(characters[0]);
+  charactersElement.appendChild(CharacterCard);
+
+  return charactersElement;
 };
 
 export default getCharactersList;
