@@ -11,7 +11,13 @@ export type Character = {
   portraitUrl: string;
   portraitDescription: string;
   die: () => void;
+  speak: () => string;
 };
+
+export type CharacterData = Pick<
+  Character,
+  "name" | "lastName" | "age" | "portraitUrl" | "portraitDescription"
+>;
 
 export type Portrait = {
   url: string;
