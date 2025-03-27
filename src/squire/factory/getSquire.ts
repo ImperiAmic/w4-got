@@ -1,25 +1,20 @@
-import { Character, NumberRange } from "../../character/types.js";
-import { Squire } from "../types.js";
-import getCharacterToSpeak from "../../character/getCharacterToSpeak.js";
+import { CharacterData } from "../../character/types.js";
+import { Ballism, Squire } from "../types.js";
 import { Fighter } from "../../fighter/types.js";
+import getCharacter from "../../character/factory/getCharacter.js";
 
 const getSquire = (
-  characterData: Character,
+  characterData: CharacterData,
   servesTo: Fighter,
-  ballism: NumberRange,
+  ballism: Ballism,
 ): Squire => {
+  const character = getCharacter(characterData);
+
   const squire: Squire = {
-    name: characterData.name,
-    lastName: characterData.lastName,
-    age: characterData.age,
-    isAlive: characterData.isAlive,
-    die: characterData.die,
-    portraitUrl: characterData.portraitUrl,
-    portraitDescription: characterData.portraitDescription,
+    ...character,
     servesTo,
     ballism,
-    phrase: "I am a looser",
-    speak: () => getCharacterToSpeak(squire.phrase),
+    speak: () => "I am a looser",
   };
 
   return squire;
