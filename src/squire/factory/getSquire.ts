@@ -1,14 +1,11 @@
-import {
-  Character,
-  CharacterType,
-  NumberRange,
-} from "../../character/types.js";
+import { Character, NumberRange } from "../../character/types.js";
 import { Squire } from "../types.js";
 import getCharacterToSpeak from "../../character/getCharacterToSpeak.js";
+import { Fighter } from "../../fighter/types.js";
 
 const getSquire = (
   characterData: Character,
-  servesTo: CharacterType,
+  servesTo: Fighter,
   ballism: NumberRange,
 ): Squire => {
   const squire: Squire = {

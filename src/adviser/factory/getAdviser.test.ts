@@ -14,7 +14,7 @@ describe("Given the getAdviser function", () => {
 
     const dancer = getCharacter(fullName, age, portrait);
 
-    describe("that advises to Darrow O'Lykos", () => {
+    describe("That advises to Darrow O'Lykos", () => {
       const darrow = getCharacter("Darrow O'Lykos", 35, portrait);
       const fighterDarrow = getFighter(darrow, "Sling Blade", 10);
 
@@ -37,12 +37,12 @@ describe("Given the getAdviser function", () => {
       });
 
       test("Then it should return an adviser that advise to 'Darrow O'Lykos'", () => {
-        const expectAdvisesTo = fighterDarrow;
+        const expectedAdvisesTo = fighterDarrow;
 
         const adviser = getAdviser(dancer, fighterDarrow);
         const actualAdvisesTo = adviser.advisesTo;
 
-        expect(actualAdvisesTo).toBe(expectAdvisesTo);
+        expect(actualAdvisesTo).toBe(expectedAdvisesTo);
       });
 
       test("Then it should return an adviser that says 'I don't know why, but I think I'm going to die soon'", () => {
