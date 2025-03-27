@@ -1,22 +1,13 @@
-import killCharacter from "../killCharacter.js";
-import { Character } from "../types.js";
-import { Portrait } from "../types.js";
+import { Character, CharacterData } from "../types.js";
 
-const getCharacter = (
-  fullName: string,
-  age: number,
-  portrait: Portrait,
-): Character => {
-  const name = fullName.split(" ");
-
+const getCharacter = (characterData: CharacterData): Character => {
   const character: Character = {
-    name: name[0],
-    lastName: name[1],
-    age,
+    ...characterData,
     isAlive: true,
-    portraitUrl: portrait.url,
-    portraitDescription: portrait.description,
-    die: () => killCharacter(character),
+    die() {
+      this.isAlive = false;
+    },
+    speak: () => "",
   };
 
   return character;

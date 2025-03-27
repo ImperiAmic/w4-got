@@ -11,7 +11,13 @@ export type Character = {
   portraitUrl: string;
   portraitDescription: string;
   die: () => void;
+  speak: () => string;
 };
+
+export type CharacterData = Pick<
+  Character,
+  "name" | "lastName" | "age" | "portraitUrl" | "portraitDescription"
+>;
 
 export type Portrait = {
   url: string;
@@ -19,5 +25,3 @@ export type Portrait = {
 };
 
 export type CharacterType = King | Fighter | Squire | Adviser;
-
-export type NumberRange = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;

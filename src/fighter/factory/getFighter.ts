@@ -1,24 +1,19 @@
-import getCharacterToSpeak from "../../character/getCharacterToSpeak.js";
-import { Character, NumberRange } from "../../character/types.js";
-import { Fighter } from "../types.js";
+import getCharacter from "../../character/factory/getCharacter.js";
+import { CharacterData } from "../../character/types.js";
+import { Dexterity, Fighter } from "../types.js";
 
 const getFighter = (
-  characterData: Character,
+  characterData: CharacterData,
   weapon: string,
-  dexterity: NumberRange,
+  dexterity: Dexterity,
 ): Fighter => {
+  const character = getCharacter(characterData);
+
   const fighter: Fighter = {
-    name: characterData.name,
-    lastName: characterData.lastName,
-    age: characterData.age,
-    isAlive: characterData.isAlive,
-    die: characterData.die,
-    portraitUrl: characterData.portraitUrl,
-    portraitDescription: characterData.portraitDescription,
+    ...character,
     weapon,
     dexterity,
-    phrase: "First I punch, then I ask",
-    speak: () => getCharacterToSpeak(fighter.phrase),
+    speak: () => "First I punch, then I ask",
   };
 
   return fighter;

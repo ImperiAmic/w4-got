@@ -1,19 +1,14 @@
-import getCharacterToSpeak from "../../character/getCharacterToSpeak.js";
-import { Character } from "../../character/types.js";
+import getCharacter from "../../character/factory/getCharacter.js";
+import { CharacterData } from "../../character/types.js";
 import { King } from "../types.js";
 
-const getKing = (characterData: Character, yearsOfReign: number): King => {
+const getKing = (characterData: CharacterData, yearsOfReign: number): King => {
+  const character = getCharacter(characterData);
+
   const king: King = {
-    name: characterData.name,
-    lastName: characterData.lastName,
-    age: characterData.age,
-    isAlive: characterData.isAlive,
-    die: characterData.die,
-    portraitUrl: characterData.portraitUrl,
-    portraitDescription: characterData.portraitDescription,
+    ...character,
     yearsOfReign,
-    phrase: "You are all going to die",
-    speak: () => getCharacterToSpeak(king.phrase),
+    speak: () => "You are all going to die",
   };
 
   return king;

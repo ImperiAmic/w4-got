@@ -1,23 +1,22 @@
-import { Character } from "../../character/types";
 import getKing from "./getKing";
 
 describe("Given the getKing function", () => {
   describe("When it receives Felipe IV character and 19 years of reign", () => {
     const yearsOfReign = 19;
-    const felipeIV: Character = {
-      name: "Felipe",
-      lastName: "IV",
-      age: 60,
-      isAlive: false,
-      die: () => {},
-      portraitUrl: "",
-      portraitDescription: "",
-    };
 
     test("Then it should return a king with name 'Felipe'", () => {
       const expectedName = "Felipe";
 
-      const king = getKing(felipeIV, yearsOfReign);
+      const king = getKing(
+        {
+          name: "Felipe",
+          lastName: "IV",
+          age: 60,
+          portraitUrl: "",
+          portraitDescription: "",
+        },
+        yearsOfReign,
+      );
       const actualName = king.name;
 
       expect(actualName).toBe(expectedName);
@@ -26,7 +25,16 @@ describe("Given the getKing function", () => {
     test("Then it should return a king with last name 'IV'", () => {
       const expectedLastName = "IV";
 
-      const king = getKing(felipeIV, yearsOfReign);
+      const king = getKing(
+        {
+          name: "Felipe",
+          lastName: "IV",
+          age: 60,
+          portraitUrl: "",
+          portraitDescription: "",
+        },
+        yearsOfReign,
+      );
       const actualLastName = king.lastName;
 
       expect(actualLastName).toBe(expectedLastName);
@@ -35,7 +43,16 @@ describe("Given the getKing function", () => {
     test("Then it should return a king with 19 years of reign", () => {
       const expectedYearsOfReign = 19;
 
-      const king = getKing(felipeIV, yearsOfReign);
+      const king = getKing(
+        {
+          name: "Felipe",
+          lastName: "IV",
+          age: 60,
+          portraitUrl: "",
+          portraitDescription: "",
+        },
+        yearsOfReign,
+      );
       const actualYearsOfReign = king.yearsOfReign;
 
       expect(actualYearsOfReign).toBe(expectedYearsOfReign);
@@ -44,8 +61,17 @@ describe("Given the getKing function", () => {
     test("Then it should return a king that says 'You are all going to die'", () => {
       const expectedPhrase = "You are all going to die";
 
-      const king = getKing(felipeIV, yearsOfReign);
-      const actualPhrase = king.phrase;
+      const king = getKing(
+        {
+          name: "Felipe",
+          lastName: "IV",
+          age: 60,
+          portraitUrl: "",
+          portraitDescription: "",
+        },
+        yearsOfReign,
+      );
+      const actualPhrase = king.speak();
 
       expect(actualPhrase).toBe(expectedPhrase);
     });
