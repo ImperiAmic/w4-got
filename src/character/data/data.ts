@@ -48,16 +48,4 @@ export const characters: (King | Adviser | Fighter | Squire)[] = [
       return "";
     },
   },
-  {
-    name: "Bronn",
-    lastName: "Blackwater",
-    age: 35,
-    portraitUrl: "/images/bronn.webp",
-    portraitDescription: "Portrait of Bronn Blackwater",
-    isAlive: true,
-    die: () => {},
-    servesTo: "Jaime Lannister",
-    ballism: 10,
-    phrase: "I am a looser",
-  },
 ];

@@ -1,7 +1,8 @@
-import { Character } from "../character/types";
+import { Character, CharacterType, NumberRange } from "../character/types.js";
 
 export type Squire = Character & {
-  servesTo: string;
-  ballism: number;
+  servesTo: CharacterType;
+  ballism: NumberRange;
   phrase: "I am a looser";
+  speak: () => string;
 };
