@@ -1,22 +1,18 @@
-import { Character, CharacterType } from "../../character/types.js";
+import getCharacter from "../../character/factory/getCharacter.js";
+import { CharacterType } from "../../character/types.js";
 import { Adviser } from "../types.js";
-import getCharacterToSpeak from "../../character/getCharacterToSpeak.js";
+import { CharacterData } from "../../character/types.js";
 
 const getAdviser = (
-  characterData: Character,
+  characterData: CharacterData,
   advisesTo: CharacterType,
 ): Adviser => {
+  const character = getCharacter(characterData);
+
   const adviser: Adviser = {
-    name: characterData.name,
-    lastName: characterData.lastName,
-    age: characterData.age,
-    isAlive: characterData.isAlive,
-    die: characterData.die,
-    portraitUrl: characterData.portraitUrl,
-    portraitDescription: characterData.portraitDescription,
+    ...character,
     advisesTo,
-    phrase: "I don't know why, but I think I'm going to die soon",
-    speak: () => getCharacterToSpeak(adviser.phrase),
+    speak: () => "I don't know why, but I think I'm going to die soon",
   };
 
   return adviser;
