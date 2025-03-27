@@ -50,7 +50,7 @@ const tyrion = getAdviser(
   daenerys,
 );
 
-const bronn = getSquire(
+export const bronn = getSquire(
   {
     name: "Bronn",
     lastName: "Blackwater",
