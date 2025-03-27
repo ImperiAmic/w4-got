@@ -1,8 +1,8 @@
-import getAdviser from "../../adviser/factory/getAdviser";
-import getFighter from "../../fighter/factory/getFighter";
-import getKing from "../../king/factory/getKing";
-import getSquire from "../../squire/factory/getSquire";
-import getPhrases from "../getPhrases";
+import getAdviser from "../adviser/factory/getAdviser";
+import getFighter from "../fighter/factory/getFighter";
+import getKing from "../king/factory/getKing";
+import getSquire from "../squire/factory/getSquire";
+import getPhrases from "./getPhrases";
 
 describe("Given the getPhrase function", () => {
   const felipe = getKing(
