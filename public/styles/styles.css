@@ -44,11 +44,18 @@ h2 {
   border-radius: 6px;
   box-shadow: 3px 3px 2px #000;
   background-color: #331c0f;
-  padding: 20px;
-  min-height: 410px;
-  min-width: 340px;
+  max-width: 300px;
+  overflow: hidden;
 }
 
 .character-title {
   font-size: 2rem;
+  padding: 10px;
+  height: 5rem;
+  align-self: self-start;
+}
+
+.character-portrait {
+  width: 100%;
+  height: auto;
 }
