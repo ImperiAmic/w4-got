@@ -1,9 +1,7 @@
 import { CharacterType } from "./types";
 
 const getPhrases = (characters: CharacterType[]): string[] => {
-  const phrases: string[] = [];
-
-  characters.map((character) => phrases.push(character.phrase));
+  const phrases = characters.map((character) => character.speak());
 
   return phrases;
 };

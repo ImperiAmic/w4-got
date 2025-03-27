@@ -1,71 +1,55 @@
-import { Adviser } from "../../adviser/types";
-import { Fighter } from "../../fighter/types";
-import { King } from "../../king/types";
-import { Squire } from "../../squire/types";
+import getAdviser from "../../adviser/factory/getAdviser";
+import getFighter from "../../fighter/factory/getFighter";
+import getKing from "../../king/factory/getKing";
+import getSquire from "../../squire/factory/getSquire";
 import getPhrases from "../getPhrases";
 
 describe("Given the getPhrase function", () => {
-  const felipe: King = {
-    name: "",
-    lastName: "",
-    age: 0,
-    portraitUrl: "",
-    portraitDescription: "",
-    isAlive: true,
-    die: () => {},
-    yearsOfReign: 0,
-    phrase: "You are all going to die",
-    speak: () => {
-      return "";
+  const felipe = getKing(
+    {
+      name: "",
+      lastName: "",
+      age: 50,
+      portraitUrl: "",
+      portraitDescription: "",
     },
-  };
+    5,
+  );
 
-  const joseMariaAznar: Adviser = {
-    name: "",
-    lastName: "",
-    age: 0,
-    portraitUrl: "",
-    portraitDescription: "",
-    isAlive: true,
-    die: () => {},
-    advisesTo: felipe,
-    phrase: "I don't know why, but I think I'm going to die soon",
-    speak: () => {
-      return "";
+  const joseMariaAznar = getAdviser(
+    {
+      name: "",
+      lastName: "",
+      age: 50,
+      portraitUrl: "",
+      portraitDescription: "",
     },
-  };
+    felipe,
+  );
 
-  const jimenezLosantos: Fighter = {
-    name: "",
-    lastName: "",
-    age: 0,
-    portraitUrl: "",
-    portraitDescription: "",
-    isAlive: true,
-    die: () => {},
-    weapon: "",
-    dexterity: 0,
-    phrase: "First I punch, then I ask",
-    speak: () => {
-      return "";
+  const jimenezLosantos = getFighter(
+    {
+      name: "",
+      lastName: "",
+      age: 50,
+      portraitUrl: "",
+      portraitDescription: "",
     },
-  };
+    "",
+    4,
+  );
 
-  const albertRivera: Squire = {
-    name: "",
-    lastName: "",
-    age: 0,
-    portraitUrl: "",
-    portraitDescription: "",
-    isAlive: true,
-    die: () => {},
-    servesTo: jimenezLosantos,
-    ballism: 0,
-    phrase: "I am a looser",
-    speak: () => {
-      return "";
+  const albertRivera = getSquire(
+    {
+      name: "",
+      lastName: "",
+      age: 50,
+      portraitUrl: "",
+      portraitDescription: "",
     },
-  };
+    jimenezLosantos,
+    10,
+  );
 
   describe("When it receives Felipe, Jose María Aznar, Jimenez Losantos and Albert Ribera characters", () => {
     test("Then it should return 4 phrases", () => {
