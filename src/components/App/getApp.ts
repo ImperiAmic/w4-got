@@ -1,3 +1,4 @@
+import { characters } from "../../character/data/data.js";
 import getCharactersList from "../CharactersList/getCharactersList.js";
 import getHeader from "../Header/getHeader.js";
 
@@ -6,7 +7,7 @@ export const getApp = (): HTMLElement => {
   mainContainer.classList.add("main-container");
 
   const Header = getHeader();
-  const CharactersList = getCharactersList();
+  const CharactersList = getCharactersList(characters);
 
   mainContainer.appendChild(Header);
   mainContainer.appendChild(CharactersList);

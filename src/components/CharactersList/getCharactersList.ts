@@ -1,12 +1,14 @@
-import { characters } from "../../character/data/data.js";
+import { CharacterType } from "../../character/types.js";
 import getCharacterCard from "../CharacterCard/getCharacterCard.js";
 
-const getCharactersList = (): HTMLElement => {
+const getCharactersList = (characters: CharacterType[]): HTMLElement => {
   const charactersElement = document.createElement("ul");
   charactersElement.className = "characters";
 
-  const CharacterCard = getCharacterCard(characters[0]);
-  charactersElement.appendChild(CharacterCard);
+  characters.forEach((character) => {
+    const CharacterCard = getCharacterCard(character);
+    charactersElement.appendChild(CharacterCard);
+  });
 
   return charactersElement;
 };
