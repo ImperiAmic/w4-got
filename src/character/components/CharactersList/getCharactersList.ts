@@ -1,7 +1,7 @@
-import { CharacterType } from "../../types.js";
+import { Character } from "../../types.js";
 import getCharacterCard from "../CharacterCard/getCharacterCard.js";
 
-const getCharactersList = (characters: CharacterType[]): HTMLElement => {
+const getCharactersList = (characters: Character[]): HTMLElement => {
   const charactersElement = document.createElement("ul");
   charactersElement.className = "characters";
 
