@@ -1,105 +1,36 @@
+import { kaladin } from "../../character/fixtures";
 import getFighter from "./getFighter";
 
 describe("Given the getFighter function", () => {
-  describe("When it receives Kaladin Stormblessed character", () => {
-    describe("With the weapon Sylphrena and 10 dexerity", () => {
-      const weapon = "Sylphrena";
-      const dexerity = 10;
+  describe("When it receives Kaladin Stormblessed with the weapon Sylphrena and 10 dexerity", () => {
+    const weapon = "Sylphrena";
+    const dexerity = 10;
 
-      test("Then it should return a fighter with name 'Kaladin'", () => {
-        const expectedName = "Kaladin";
+    test("Then it should return a fighter with the weapon 'Sylphrena'", () => {
+      const expectedWeapon = "Sylphrena";
 
-        const fighter = getFighter(
-          {
-            name: "Kaladin",
-            lastName: "Stormblessed",
-            age: 22,
-            portraitUrl: "",
-            portraitDescription: "",
-          },
-          weapon,
-          dexerity,
-        );
-        const actualName = fighter.name;
+      const fighter = getFighter(kaladin, weapon, dexerity);
+      const actualWeapon = fighter.weapon;
 
-        expect(actualName).toBe(expectedName);
-      });
+      expect(actualWeapon).toBe(expectedWeapon);
+    });
 
-      test("Then it should return a fighter with last name 'Stormblessed'", () => {
-        const expectedLastName = "Stormblessed";
+    test("Then it should return a fighter with 10 dexterity", () => {
+      const expectedDexterity = 10;
 
-        const fighter = getFighter(
-          {
-            name: "Kaladin",
-            lastName: "Stormblessed",
-            age: 22,
-            portraitUrl: "",
-            portraitDescription: "",
-          },
-          weapon,
-          dexerity,
-        );
-        const actualLastName = fighter.lastName;
+      const fighter = getFighter(kaladin, weapon, dexerity);
+      const actualDexterity = fighter.dexterity;
 
-        expect(actualLastName).toBe(expectedLastName);
-      });
+      expect(actualDexterity).toBe(expectedDexterity);
+    });
 
-      test("Then it should return a fighter with the weapon 'Sylphrena'", () => {
-        const expectedWeapon = "Sylphrena";
+    test("Then it should return a fighter that says 'First I punch, then I ask'", () => {
+      const expectedPhrase = "First I punch, then I ask";
 
-        const fighter = getFighter(
-          {
-            name: "Kaladin",
-            lastName: "Stormblessed",
-            age: 22,
-            portraitUrl: "",
-            portraitDescription: "",
-          },
-          weapon,
-          dexerity,
-        );
-        const actualWeapon = fighter.weapon;
+      const fighter = getFighter(kaladin, weapon, dexerity);
+      const actualPhrase = fighter.speak();
 
-        expect(actualWeapon).toBe(expectedWeapon);
-      });
-
-      test("Then it should return a fighter with 10 dexterity", () => {
-        const expectedDexterity = 10;
-
-        const fighter = getFighter(
-          {
-            name: "Kaladin",
-            lastName: "Stormblessed",
-            age: 22,
-            portraitUrl: "",
-            portraitDescription: "",
-          },
-          weapon,
-          dexerity,
-        );
-        const actualDexterity = fighter.dexterity;
-
-        expect(actualDexterity).toBe(expectedDexterity);
-      });
-
-      test("Then it should return a fighter that says 'First I punch, then I ask'", () => {
-        const expectedPhrase = "First I punch, then I ask";
-
-        const fighter = getFighter(
-          {
-            name: "Kaladin",
-            lastName: "Stormblessed",
-            age: 22,
-            portraitUrl: "",
-            portraitDescription: "",
-          },
-          weapon,
-          dexerity,
-        );
-        const actualPhrase = fighter.speak();
-
-        expect(actualPhrase).toBe(expectedPhrase);
-      });
+      expect(actualPhrase).toBe(expectedPhrase);
     });
   });
 });

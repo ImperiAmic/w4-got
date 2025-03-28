@@ -1,8 +1,3 @@
-import { Adviser } from "../adviser/types.js";
-import { Fighter } from "../fighter/types.js";
-import { King } from "../king/types.js";
-import { Squire } from "../squire/types.js";
-
 export type Character = {
   name: string;
   lastName: string;
@@ -18,10 +13,3 @@ export type CharacterData = Pick<
   Character,
   "name" | "lastName" | "age" | "portraitUrl" | "portraitDescription"
 >;
-
-export type Portrait = {
-  url: string;
-  description: string;
-};
-
-export type CharacterType = King | Fighter | Squire | Adviser;

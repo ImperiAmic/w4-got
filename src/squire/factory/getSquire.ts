@@ -14,7 +14,9 @@ const getSquire = (
     ...character,
     servesTo,
     ballism,
-    speak: () => "I am a looser",
+    speak() {
+      return "I am a looser";
+    },
   };
 
   return squire;

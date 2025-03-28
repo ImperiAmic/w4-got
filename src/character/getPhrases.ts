@@ -1,6 +1,6 @@
-import { CharacterType } from "./types";
+import { Character } from "./types";
 
-const getPhrases = (characters: CharacterType[]): string[] => {
+const getPhrases = (characters: Character[]): string[] => {
   const phrases = characters.map((character) => character.speak());
 
   return phrases;
