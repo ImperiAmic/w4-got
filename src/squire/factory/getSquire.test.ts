@@ -5,7 +5,7 @@ describe("Given the getSquire function", () => {
   describe("When it receives Wayne Ladrian", () => {
     const ballism = 10;
 
-    describe("That serves to Waxillium Ladrian and has a ballism of 10", () => {
+    describe("And serves to Waxillium Ladrian and has a ballism of 10", () => {
       const wax = getFighter(
         {
           name: "Waxillium",

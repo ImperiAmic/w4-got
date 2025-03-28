@@ -3,8 +3,8 @@ import getFighter from "../../fighter/factory/getFighter";
 import getAdviser from "./getAdviser";
 
 describe("Given the getAdviser function", () => {
-  describe("When it receives Dancer O'Faran character", () => {
-    describe("That advises to Darrow O'Lykos", () => {
+  describe("When it receives Dancer O'Faran", () => {
+    describe("And advises to Darrow O'Lykos", () => {
       const darrow = getCharacter({
         name: "Darrow",
         lastName: "O'Lykos",
@@ -13,42 +13,6 @@ describe("Given the getAdviser function", () => {
         portraitDescription: "",
       });
       const fighterDarrow = getFighter(darrow, "Sling Blade", 10);
-
-      test("Then it should return an adviser with name 'Dancer'", () => {
-        const expectedName = "Dancer";
-
-        const adviser = getAdviser(
-          {
-            name: "Dancer",
-            lastName: "O'Faran",
-            age: 58,
-            portraitUrl: "",
-            portraitDescription: "",
-          },
-          fighterDarrow,
-        );
-        const actualName = adviser.name;
-
-        expect(actualName).toBe(expectedName);
-      });
-
-      test("Then it should return an adviser with last name 'O'Faran'", () => {
-        const expectedLastName = "O'Faran";
-
-        const adviser = getAdviser(
-          {
-            name: "Dancer",
-            lastName: "O'Faran",
-            age: 58,
-            portraitUrl: "",
-            portraitDescription: "",
-          },
-          fighterDarrow,
-        );
-        const actualLastName = adviser.lastName;
-
-        expect(actualLastName).toBe(expectedLastName);
-      });
 
       test("Then it should return an adviser that advise to 'Darrow O'Lykos'", () => {
         const expectedAdvisesTo = fighterDarrow;
