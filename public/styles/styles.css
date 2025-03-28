@@ -7,6 +7,8 @@
 body {
   font-family: "Grenze Gotisch", "Courier New", Courier, monospace;
   margin: 0;
+  background-color: #b9540b;
+  color: #fff;
 }
 
 h1,
@@ -14,17 +16,27 @@ h2 {
   margin: 0;
 }
 
+img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+ul {
+  padding: 0;
+}
+
 .main-container {
   margin: 0 auto;
-  background-color: #b9540b;
-  color: #fff;
+  padding: 40px 40px 80px 40px;
+  max-width: 1000px;
 }
 
 .main-header {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
   font-size: 1.875rem;
 }
 
@@ -35,27 +47,29 @@ h2 {
 .characters {
   list-style: none;
   margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
+  padding-top: 40px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+
+  @media (width < 600px) {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .character {
   border-radius: 6px;
   box-shadow: 3px 3px 2px #000;
   background-color: #331c0f;
-  max-width: 300px;
   overflow: hidden;
 }
 
-.character-title {
-  font-size: 2rem;
+.character__info {
   padding: 10px;
-  height: 5rem;
-  align-self: self-start;
 }
 
-.character-portrait {
-  width: 100%;
-  height: auto;
+.character__title {
+  font-size: 2rem;
+  padding: 10px;
 }

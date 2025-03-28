@@ -1,29 +1,21 @@
-import getKing from "../../king/factory/getKing";
+import getKing from "../../../king/factory/getKing";
+import { felipe } from "../../fixtures";
 import getCharacterCard from "./getCharacterCard";
 
 describe("Given the CharacterCard component", () => {
   describe("When it renders the Felipe character", () => {
-    const felipe = getKing(
-      {
-        name: "Felipe",
-        lastName: "Sesto",
-        age: 50,
-        portraitUrl: "/images/bronn.webp",
-        portraitDescription: "Felipe Sesto Portrait",
-      },
-      10,
-    );
+    const king = getKing(felipe, 10);
 
     test("Then it should show the Felipe character name and last name inside a character card", () => {
       const screen = document.createElement("div");
 
-      const expectedCardTitle = `${felipe.name} ${felipe.lastName}`;
+      const expectedCardTitle = `${king.name} ${king.lastName}`;
 
-      const CharacterCard = getCharacterCard(felipe);
+      const CharacterCard = getCharacterCard(king);
 
       screen.appendChild(CharacterCard);
 
-      const CardArticle = screen.querySelector("li");
+      const CardArticle = screen.querySelector("article");
       const CardTitle = screen.querySelector("h2");
 
       expect(CardArticle).not.toBeNull();
@@ -33,9 +25,9 @@ describe("Given the CharacterCard component", () => {
 
     test("Then it should show a portrait of Felipe Sesto inside a character card", () => {
       const screen = document.createElement("div");
-      const expectedImageDescription = felipe.portraitDescription;
+      const expectedImageDescription = king.portraitDescription;
 
-      const CharacterCard = getCharacterCard(felipe);
+      const CharacterCard = getCharacterCard(king);
 
       screen.appendChild(CharacterCard);
 

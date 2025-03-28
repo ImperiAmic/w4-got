@@ -35,3 +35,30 @@ export const wayne: CharacterData = {
     "https://mediaproxy.tvtropes.org/width/1200/https://static.tvtropes.org/pmwiki/pub/images/tumblr_m6kbrisa1t1r18mzfo1_1280.jpg",
   portraitDescription: "Wayne and Wax posing with guns",
 };
+
+export const paul: CharacterData = {
+  name: "Paul",
+  lastName: "Atreides",
+  age: 15,
+  portraitUrl: "https://i.blogs.es/d1eeb1/pau-atreides/375_375.jpeg",
+  portraitDescription: "Paul Atreides, as a Fremen, posing defiantly",
+};
+
+export const hawat: CharacterData = {
+  name: "Thufir",
+  lastName: "Hawat",
+  age: 55,
+  portraitUrl:
+    "https://www.joblo.com/wp-content/uploads/2024/04/dune-part-two-thufir-hawat.jpg",
+  portraitDescription:
+    "Foreground of Thufir Hawat calculating, with eyes in white",
+};
+
+export const chani: CharacterData = {
+  name: "Chani",
+  lastName: "Keynes",
+  age: 18,
+  portraitUrl:
+    "https://upload.wikimedia.org/wikipedia/en/1/16/Zendaya_as_Chani_%28Dune_2021%29.jpg",
+  portraitDescription: "Foregound of Chani Keynes posing defiantly",
+};
