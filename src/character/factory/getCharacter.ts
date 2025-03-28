@@ -7,7 +7,9 @@ const getCharacter = (characterData: CharacterData): Character => {
     die() {
       this.isAlive = false;
     },
-    speak: () => "",
+    speak() {
+      return "";
+    },
   };
 
   return character;
