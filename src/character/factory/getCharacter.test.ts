@@ -1,7 +1,7 @@
 import getCharacter from "./getCharacter";
 
 describe("Given the getCharacter function", () => {
-  describe("When it receives Bruce Wayne character", () => {
+  describe("When it receives Bruce Wayne", () => {
     test("Then it should return a character with name 'Bruce'", () => {
       const expectedName = "Bruce";
 
