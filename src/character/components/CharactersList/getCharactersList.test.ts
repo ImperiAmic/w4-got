@@ -29,7 +29,7 @@ describe("Given the CharacterList component and characters Paul, Hawat and Chani
     const chani = getFighter(
       {
         name: "Chani",
-        lastName: "",
+        lastName: "Kynes",
         age: 18,
         portraitUrl: "",
         portraitDescription: "",
@@ -39,21 +39,18 @@ describe("Given the CharacterList component and characters Paul, Hawat and Chani
     );
     const characters = [paul, hawat, chani];
 
-    test("Then it should show an unordered list", () => {
+    test("Then it should show the names of Paul, Hawat and Chani inside a heading", () => {
       const CharactersList = getCharactersList(characters);
 
       screen.appendChild(CharactersList);
 
-      const unorderedList = screen.querySelector("ul");
+      const characterNames = screen.querySelectorAll("h2");
 
-      expect(unorderedList).not.toBeNull();
-    });
-
-    test("Then it should render 3 card characters", () => {
-      const listItems = screen.querySelectorAll("li");
-      const listItemsLength = listItems.length;
-
-      expect(characters.length).toBe(listItemsLength);
+      characterNames.forEach((characterName, position) => {
+        expect(characterName.textContent).toBe(
+          `${characters[position].name} ${characters[position].lastName}`,
+        );
+      });
     });
   });
 });
