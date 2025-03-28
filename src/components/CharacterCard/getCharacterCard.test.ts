@@ -23,7 +23,7 @@ describe("Given the CharacterCard component", () => {
 
       screen.appendChild(CharacterCard);
 
-      const CardArticle = screen.querySelector("li");
+      const CardArticle = screen.querySelector("article");
       const CardTitle = screen.querySelector("h2");
 
       expect(CardArticle).not.toBeNull();
