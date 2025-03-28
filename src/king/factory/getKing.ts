@@ -8,7 +8,9 @@ const getKing = (characterData: CharacterData, yearsOfReign: number): King => {
   const king: King = {
     ...character,
     yearsOfReign,
-    speak: () => "You are all going to die",
+    speak() {
+      return "You are all going to die";
+    },
   };
 
   return king;

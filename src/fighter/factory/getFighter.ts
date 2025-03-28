@@ -13,7 +13,9 @@ const getFighter = (
     ...character,
     weapon,
     dexterity,
-    speak: () => "First I punch, then I ask",
+    speak() {
+      return "First I punch, then I ask";
+    },
   };
 
   return fighter;
