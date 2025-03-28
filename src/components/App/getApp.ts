@@ -1,5 +1,5 @@
 import { characters } from "../../character/data/data.js";
-import getCharactersList from "../CharactersList/getCharactersList.js";
+import getCharactersList from "../../character/components/CharactersList/getCharactersList.js";
 import getHeader from "../Header/getHeader.js";
 
 export const getApp = (): HTMLElement => {

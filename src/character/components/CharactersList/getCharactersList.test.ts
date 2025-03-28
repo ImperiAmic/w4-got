@@ -1,6 +1,6 @@
-import getAdviser from "../../adviser/factory/getAdviser";
-import getFighter from "../../fighter/factory/getFighter";
-import getKing from "../../king/factory/getKing";
+import getAdviser from "../../../adviser/factory/getAdviser";
+import getFighter from "../../../fighter/factory/getFighter";
+import getKing from "../../../king/factory/getKing";
 import getCharactersList from "./getCharactersList";
 
 describe("Given the CharacterList component and characters Paul, Hawat and Chani", () => {

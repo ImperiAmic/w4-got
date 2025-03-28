@@ -1,4 +1,4 @@
-import { CharacterType } from "../../character/types.js";
+import { CharacterType } from "../../types.js";
 
 const getCharacterCard = (character: CharacterType): HTMLElement => {
   const characterCardElement = document.createElement("article");

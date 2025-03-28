@@ -1,4 +1,4 @@
-import getKing from "../../king/factory/getKing";
+import getKing from "../../../king/factory/getKing";
 import getCharacterCard from "./getCharacterCard";
 
 describe("Given the CharacterCard component", () => {
