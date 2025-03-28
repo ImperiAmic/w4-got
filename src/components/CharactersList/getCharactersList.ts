@@ -6,8 +6,13 @@ const getCharactersList = (characters: CharacterType[]): HTMLElement => {
   charactersElement.className = "characters";
 
   characters.forEach((character) => {
+    const characterWrapper = document.createElement("li");
+    characterWrapper.className = "character";
+
     const CharacterCard = getCharacterCard(character);
-    charactersElement.appendChild(CharacterCard);
+    characterWrapper.appendChild(CharacterCard);
+
+    charactersElement.appendChild(characterWrapper);
   });
 
   return charactersElement;
