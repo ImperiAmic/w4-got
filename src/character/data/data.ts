@@ -2,7 +2,7 @@ import getAdviser from "../../adviser/factory/getAdviser.js";
 import getFighter from "../../fighter/factory/getFighter.js";
 import getKing from "../../king/factory/getKing.js";
 import getSquire from "../../squire/factory/getSquire.js";
-import { CharacterType } from "../types.js";
+import { Character } from "../types.js";
 
 const joffrey = getKing(
   {
@@ -62,7 +62,7 @@ export const bronn = getSquire(
   10,
 );
 
-export const characters: CharacterType[] = [
+export const characters: Character[] = [
   joffrey,
   jaime,
   daenerys,

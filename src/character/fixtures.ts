@@ -17,3 +17,12 @@ export const kaladin: CharacterData = {
     "https://preview.redd.it/c03eods5x4aa1.jpg?auto=webp&s=fe3c7ca023b69ab42544100ed3504bdc925230eb",
   portraitDescription: "Kaladin flying with Sylfrena as a spear",
 };
+
+export const felipe: CharacterData = {
+  name: "Felipe",
+  lastName: "IV",
+  age: 60,
+  portraitUrl:
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Philip_IV_of_Spain.jpg/1280px-Philip_IV_of_Spain.jpg",
+  portraitDescription: "A very sexy Felipe IV posing",
+};
