@@ -1,3 +1,4 @@
+import getHoverDetails from "./getHoverDetails.js";
 import { Character } from "../../types.js";
 
 const getCharacterCard = (character: Character): HTMLElement => {
@@ -6,6 +7,9 @@ const getCharacterCard = (character: Character): HTMLElement => {
 
   const overlayElement = document.createElement("div");
   overlayElement.className = "overlay";
+
+  const detailsElement = getHoverDetails(character);
+  overlayElement.appendChild(detailsElement);
 
   let iconUrl = "/images/thumb-up-fill.svg";
   let iconDescription = "thumb up icon";
