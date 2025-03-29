@@ -7,7 +7,7 @@ const getCharactersList = (characters: Character[]): HTMLElement => {
 
   characters.forEach((character) => {
     const characterWrapper = document.createElement("li");
-    characterWrapper.className = "character";
+    characterWrapper.className = "character-wrapper";
 
     const CharacterCard = getCharacterCard(character);
     characterWrapper.appendChild(CharacterCard);
