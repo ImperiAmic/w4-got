@@ -71,6 +71,10 @@ ul {
   object-fit: cover;
 }
 
+.character__portrait--reverse {
+  scale: -1 -1;
+}
+
 .character__info {
   padding: 5px 15px 15px 15px;
   display: flex;
@@ -86,6 +90,7 @@ ul {
   display: flex;
   flex-direction: row;
   gap: 5px;
+  align-items: center;
 }
 
 .character__icon {
