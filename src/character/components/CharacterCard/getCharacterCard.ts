@@ -7,6 +7,7 @@ const getCharacterCard = (character: Character): HTMLElement => {
     <img src="${character.portraitUrl}" alt="${character.portraitDescription}" width="300" height="300">
     <div class="character__info">
       <h2 class="character__title">${character.name} ${character.lastName}</h2>
+      <span>Age: ${character.age} years</span>
     </div>
     `;
 

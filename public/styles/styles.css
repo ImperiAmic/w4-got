@@ -66,10 +66,12 @@ ul {
 }
 
 .character__info {
-  padding: 10px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .character__title {
   font-size: 2rem;
-  padding: 10px;
 }
