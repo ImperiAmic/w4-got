@@ -1,5 +1,6 @@
 import getHoverDetails from "./getHoverDetails.js";
 import { Character } from "../../types.js";
+import getTypeEmoji from "./getTypeEmoji.js";
 
 const getCharacterCard = (character: Character): HTMLElement => {
   const characterCardElement = document.createElement("article");
@@ -14,8 +15,6 @@ const getCharacterCard = (character: Character): HTMLElement => {
   let iconUrl = "/images/thumb-up-fill.svg";
   let iconDescription = "thumb up icon";
 
-  let typeEmote: string;
-
   const portraitElement = document.createElement("img");
   portraitElement.classList.add("character__portrait");
   portraitElement.src = character.portraitUrl;
@@ -29,27 +28,7 @@ const getCharacterCard = (character: Character): HTMLElement => {
     portraitElement.classList.add("character__portrait--reverse");
   }
 
-  switch (character.speak()) {
-    case "You are all going to die":
-      typeEmote = "👑";
-      break;
-
-    case "First I punch, then I ask":
-      typeEmote = "🗡";
-      break;
-
-    case "I don't know why, but I think I'm going to die soon":
-      typeEmote = "🎓";
-      break;
-
-    case "I am a looser":
-      typeEmote = "🛡️";
-      break;
-
-    default:
-      typeEmote = "";
-      break;
-  }
+  const typeEmoji = getTypeEmoji(character);
 
   characterCardElement.innerHTML = `
     <div class="character__info">
@@ -61,7 +40,7 @@ const getCharacterCard = (character: Character): HTMLElement => {
             <span class="character__text">State:</span>
             <img class="character__icon" src="${iconUrl}" alt="${iconDescription}" width="20" height="20">
           </div>
-          <span class="character__type">${typeEmote}</span>
+          <span class="character__type">${typeEmoji}</span>
         </div>
       </div>
     </div>
