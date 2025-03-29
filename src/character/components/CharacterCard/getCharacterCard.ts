@@ -1,11 +1,11 @@
-import { Character } from "../../types.js";
+import { Character } from "../../types";
+import getCharacterOverlay from "./getCharacterOverlay.js";
 
 const getCharacterCard = (character: Character): HTMLElement => {
   const characterCardElement = document.createElement("article");
   characterCardElement.className = "character";
 
-  const overlayElement = document.createElement("div");
-  overlayElement.className = "overlay";
+  const overlayElement = getCharacterOverlay();
 
   let iconUrl = "/images/thumb-up-fill.svg";
   let iconDescription = "thumb up icon";

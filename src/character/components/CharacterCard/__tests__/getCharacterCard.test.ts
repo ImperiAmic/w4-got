@@ -1,6 +1,6 @@
-import getKing from "../../../king/factory/getKing";
-import { felipe } from "../../fixtures";
-import getCharacterCard from "./getCharacterCard";
+import getKing from "../../../../king/factory/getKing";
+import { felipe } from "../../../fixtures";
+import getCharacterCard from "../getCharacterCard";
 
 const screen = document.createElement("div");
 beforeEach(() => {

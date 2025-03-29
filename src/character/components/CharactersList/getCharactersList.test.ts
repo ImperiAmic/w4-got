@@ -9,8 +9,8 @@ describe("Given the CharacterList component and characters Paul, Hawat and Chani
     const screen = document.createElement("div");
     const kingPaul = getKing(paul, 3);
     const adviserHawat = getAdviser(hawat, kingPaul);
-    const chaniFighter = getFighter(chani, "crysknife", 10);
-    const characters = [kingPaul, adviserHawat, chaniFighter];
+    const fighterChani = getFighter(chani, "crysknife", 10);
+    const characters = [kingPaul, adviserHawat, fighterChani];
 
     test("Then it should show the names of Paul, Hawat and Chani inside a heading", () => {
       const CharactersList = getCharactersList(characters);
