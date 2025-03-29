@@ -93,13 +93,26 @@ ul {
   gap: 5px;
 }
 
+.character__text {
+  font-size: 1rem;
+}
+
+.character__emotes {
+  display: flex;
+  justify-content: space-between;
+}
+
 .character__state {
   display: flex;
-  flex-direction: row;
+  width: fit-content;
   gap: 5px;
   align-items: center;
 }
 
 .character__icon {
   width: fit-content;
+}
+
+.character__type {
+  font-size: 1.1rem;
 }
