@@ -1,14 +1,14 @@
 import { darrow } from "../../../../fighter/fixtures";
-import getHoverDetails from "../getHoverDetails";
+import getCharacterOverlayDetails from "../getCharacterOverlayDetails";
 
 describe("Given the getHoverDetails function", () => {
   describe("When it receives the fighter Darrow O'Lykos", () => {
     test("Then it should show Weapon: Sling Blade and Dexterity: 10", () => {
       const screen = document.createElement("div");
 
-      const expectedTexts = ["Weapon:   Sling Blade", "Dexterity:   10"];
+      const expectedTexts = ["Weapon: Sling Blade", "Dexterity: 10"];
 
-      const darrowDetails = getHoverDetails(darrow);
+      const darrowDetails = getCharacterOverlayDetails(darrow);
 
       screen.appendChild(darrowDetails);
 

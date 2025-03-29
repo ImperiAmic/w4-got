@@ -49,7 +49,7 @@ describe("Given the CharacterCard component", () => {
 
       screen.appendChild(CharacterCard);
 
-      const AgeSpanElement = screen.querySelector("span");
+      const AgeSpanElement = screen.querySelector(".character__age");
 
       expect(AgeSpanElement).not.toBeNull();
       expect(AgeSpanElement?.textContent).toBe(expectedPhrase);

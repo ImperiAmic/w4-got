@@ -4,7 +4,7 @@ import { Adviser } from "../../../adviser/types";
 import { Squire } from "../../../squire/types";
 import { Fighter } from "../../../fighter/types";
 
-const getHoverDetails = (character: Character): HTMLElement => {
+const getCharacterOverlayDetails = (character: Character): HTMLElement => {
   const detailsElement = document.createElement("div");
   detailsElement.classList.add("character__details");
 
@@ -12,7 +12,7 @@ const getHoverDetails = (character: Character): HTMLElement => {
     const king = character as King;
 
     detailsElement.innerHTML = `
-    <span class="character__text">Years of Reign:   ${king.yearsOfReign}</span>
+    <span class="character__details">Years of Reign: ${king.yearsOfReign}</span>
     `;
 
     return detailsElement;
@@ -22,8 +22,8 @@ const getHoverDetails = (character: Character): HTMLElement => {
     const fighter = character as Fighter;
 
     detailsElement.innerHTML = `
-    <span class="character__text">Weapon:   ${fighter.weapon}</span>
-    <span class="character__text">Dexterity:   ${fighter.dexterity}</span>
+    <span class="character__details">Weapon: ${fighter.weapon}</span>
+    <span class="character__details">Dexterity: ${fighter.dexterity}</span>
     `;
 
     return detailsElement;
@@ -35,7 +35,7 @@ const getHoverDetails = (character: Character): HTMLElement => {
     const adviser = character as Adviser;
 
     detailsElement.innerHTML = `
-    <span class="character__text">Advises to:   ${adviser.advisesTo.name}  ${adviser.advisesTo.lastName}</span>
+    <span class="character__details">Advises to: ${adviser.advisesTo.name} ${adviser.advisesTo.lastName}</span>
     `;
 
     return detailsElement;
@@ -45,8 +45,8 @@ const getHoverDetails = (character: Character): HTMLElement => {
     const squire = character as Squire;
 
     detailsElement.innerHTML = `
-    <span class="character__text">Serves to:   ${squire.servesTo.name}  ${squire.servesTo.lastName}</span>
-    <span class="character__text">Ballism:   ${squire.ballism}</span>
+    <span class="character__details">Serves to: ${squire.servesTo.name} ${squire.servesTo.lastName}</span>
+    <span class="character__details">Ballism: ${squire.ballism}</span>
     `;
 
     return detailsElement;
@@ -55,4 +55,4 @@ const getHoverDetails = (character: Character): HTMLElement => {
   return detailsElement;
 };
 
-export default getHoverDetails;
+export default getCharacterOverlayDetails;
