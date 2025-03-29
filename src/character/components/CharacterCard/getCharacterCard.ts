@@ -2,7 +2,10 @@ import { Character } from "../../types.js";
 
 const getCharacterCard = (character: Character): HTMLElement => {
   const characterCardElement = document.createElement("article");
-  characterCardElement.classList.add("character");
+  characterCardElement.className = "character";
+
+  const overlayElement = document.createElement("div");
+  overlayElement.className = "overlay";
 
   let iconUrl = "/images/thumb-up-fill.svg";
   let iconDescription = "thumb up icon";
@@ -62,6 +65,11 @@ const getCharacterCard = (character: Character): HTMLElement => {
 
   characterCardElement.insertBefore(
     portraitElement,
+    characterCardElement.firstChild,
+  );
+
+  characterCardElement.insertBefore(
+    overlayElement,
     characterCardElement.firstChild,
   );
 
