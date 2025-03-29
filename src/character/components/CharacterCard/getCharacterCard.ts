@@ -2,6 +2,7 @@ import { Character } from "../../types.js";
 
 const getCharacterCard = (character: Character): HTMLElement => {
   const characterCardElement = document.createElement("article");
+  characterCardElement.classList.add("character");
 
   let iconUrl = "/images/thumb-up-fill.svg";
   let iconDescription = "thumb up icon";

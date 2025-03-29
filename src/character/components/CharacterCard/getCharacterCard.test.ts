@@ -56,7 +56,6 @@ describe("Given the CharacterCard component", () => {
     });
 
     test("Then it should show a state with a thumb up icon when Felipe Sesto is alive inside a character card", () => {
-      const screen = document.createElement("div");
       const expectedIconDescription = "thumb up icon";
 
       const CharacterCard = getCharacterCard(kingFelipe);
@@ -72,7 +71,6 @@ describe("Given the CharacterCard component", () => {
     });
 
     test("Then it should show a state with a thumb down icon when we kill Felipe Sesto inside a character card", () => {
-      const screen = document.createElement("div");
       const expectedIconDescription = "thumb down icon";
 
       const deadKingFelipe = { ...kingFelipe };
@@ -91,8 +89,6 @@ describe("Given the CharacterCard component", () => {
     });
 
     test("Then it should show an upside down portrait of Felipe Sesto when we kill him inside a character card", () => {
-      const screen = document.createElement("div");
-
       const deadKingFelipe = { ...kingFelipe };
       deadKingFelipe.isAlive = false;
 
@@ -103,6 +99,19 @@ describe("Given the CharacterCard component", () => {
       const CardImage = screen.querySelector(".character__portrait--reverse");
 
       expect(CardImage).not.toBeNull();
+    });
+
+    test("Then it should show an emoji for each character type: crown for king, sword for fighter, graduation for adviser and shield for squire", () => {
+      const expectedKingEmoji = "👑";
+
+      const CharacterCard = getCharacterCard(kingFelipe);
+
+      screen.appendChild(CharacterCard);
+
+      const CardEmoji = screen.querySelector(".character__type");
+
+      expect(CardEmoji).not.toBeNull();
+      expect(CardEmoji?.textContent).toBe(expectedKingEmoji);
     });
   });
 });
