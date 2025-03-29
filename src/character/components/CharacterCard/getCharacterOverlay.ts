@@ -1,18 +1,18 @@
-const getCharacterOverlay = (): HTMLElement => {
-  const overlayElement = document.createElement("div");
-  overlayElement.className = "overlay";
+import { Character } from "../../types";
+import getCharacterOverlayButtons from "./getCharacterOverlayButtons.js";
+import getCharacterOverlayDetails from "./getCharacterOverlayDetails.js";
 
-  const buttonsOverlayElement = document.createElement("div");
-  buttonsOverlayElement.className = "overlay-buttons";
+export const getCharacterOverlay = (character: Character): HTMLElement => {
+  const characterOverlayElement = document.createElement("div");
+  characterOverlayElement.className = "overlay";
 
-  buttonsOverlayElement.innerHTML = `
-  <button type="button" class="overlay__button">Speak</button>
-  <button type="button" class="overlay__button">Die</button>
-  `;
+  const characterOverlayDetailsElement = getCharacterOverlayDetails(character);
+  const characterOverlayButttonsElement = getCharacterOverlayButtons();
 
-  overlayElement.appendChild(buttonsOverlayElement);
+  characterOverlayElement.appendChild(characterOverlayDetailsElement);
+  characterOverlayElement.appendChild(characterOverlayButttonsElement);
 
-  return overlayElement;
+  return characterOverlayElement;
 };
 
 export default getCharacterOverlay;
