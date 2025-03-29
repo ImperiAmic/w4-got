@@ -22,10 +22,12 @@ const getCharacterCard = (character: Character): HTMLElement => {
   characterCardElement.innerHTML = `
     <div class="character__info">
       <h2 class="character__title">${character.name} ${character.lastName}</h2>
-      <span>Age: ${character.age} years</span>
-      <div class="character__state">
-        <span>State:</span>
-        <img class="character__icon" src="${iconUrl}" alt="${iconDescription}" width="20" height="20">
+      <div class="character__data">
+        <span>Age: ${character.age} years</span>
+        <div class="character__state">
+          <span>State:</span>
+          <img class="character__icon" src="${iconUrl}" alt="${iconDescription}" width="20" height="20">
+        </div>
       </div>
     </div>
     `;
