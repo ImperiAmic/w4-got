@@ -80,10 +80,17 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  gap: 10px;
 }
 
 .character__title {
   font-size: 1.3rem;
+}
+
+.character__data {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .character__state {

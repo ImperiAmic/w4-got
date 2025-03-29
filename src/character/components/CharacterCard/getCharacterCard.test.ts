@@ -2,16 +2,19 @@ import getKing from "../../../king/factory/getKing";
 import { felipe } from "../../fixtures";
 import getCharacterCard from "./getCharacterCard";
 
+const screen = document.createElement("div");
+beforeEach(() => {
+  screen.innerHTML = "";
+});
+
 describe("Given the CharacterCard component", () => {
   describe("When it renders the Felipe character", () => {
-    const king = getKing(felipe, 10);
+    const kingFelipe = getKing(felipe, 10);
 
-    test("Then it should show the Felipe character name and last name inside a character card", () => {
-      const screen = document.createElement("div");
+    test("Then it should show the Felipe character name and last name in a heading, inside the character card", () => {
+      const expectedCardTitle = `${kingFelipe.name} ${kingFelipe.lastName}`;
 
-      const expectedCardTitle = `${king.name} ${king.lastName}`;
-
-      const CharacterCard = getCharacterCard(king);
+      const CharacterCard = getCharacterCard(kingFelipe);
 
       screen.appendChild(CharacterCard);
 
@@ -23,11 +26,10 @@ describe("Given the CharacterCard component", () => {
       expect(CardTitle?.textContent).toBe(expectedCardTitle);
     });
 
-    test("Then it should show a portrait of Felipe Sesto inside a character card", () => {
-      const screen = document.createElement("div");
-      const expectedImageDescription = king.portraitDescription;
+    test("Then it should show a portrait of Felipe Sesto inside the character card", () => {
+      const expectedImageDescription = kingFelipe.portraitDescription;
 
-      const CharacterCard = getCharacterCard(king);
+      const CharacterCard = getCharacterCard(kingFelipe);
 
       screen.appendChild(CharacterCard);
 
@@ -39,11 +41,25 @@ describe("Given the CharacterCard component", () => {
       expect(CardImage?.alt).toBe(expectedImageDescription);
     });
 
+    test("Then it should show age of Felipe Sesto as 'Age: 60 years' phrase inside the character card", () => {
+      const expectedAge = kingFelipe.age;
+      const expectedPhrase = `Age: ${expectedAge} years`;
+
+      const CharacterCard = getCharacterCard(kingFelipe);
+
+      screen.appendChild(CharacterCard);
+
+      const AgeSpanElement = screen.querySelector("span");
+
+      expect(AgeSpanElement).not.toBeNull();
+      expect(AgeSpanElement?.textContent).toBe(expectedPhrase);
+    });
+
     test("Then it should show a state with a thumb up icon when Felipe Sesto is alive inside a character card", () => {
       const screen = document.createElement("div");
       const expectedIconDescription = "thumb up icon";
 
-      const CharacterCard = getCharacterCard(king);
+      const CharacterCard = getCharacterCard(kingFelipe);
 
       screen.appendChild(CharacterCard);
 
@@ -59,10 +75,10 @@ describe("Given the CharacterCard component", () => {
       const screen = document.createElement("div");
       const expectedIconDescription = "thumb down icon";
 
-      const deadKing = { ...king };
-      deadKing.isAlive = false;
+      const deadKingFelipe = { ...kingFelipe };
+      deadKingFelipe.isAlive = false;
 
-      const CharacterCard = getCharacterCard(deadKing);
+      const CharacterCard = getCharacterCard(deadKingFelipe);
 
       screen.appendChild(CharacterCard);
 
@@ -77,10 +93,10 @@ describe("Given the CharacterCard component", () => {
     test("Then it should show an upside down portrait of Felipe Sesto when we kill him inside a character card", () => {
       const screen = document.createElement("div");
 
-      const deadKing = { ...king };
-      deadKing.isAlive = false;
+      const deadKingFelipe = { ...kingFelipe };
+      deadKingFelipe.isAlive = false;
 
-      const CharacterCard = getCharacterCard(deadKing);
+      const CharacterCard = getCharacterCard(deadKingFelipe);
 
       screen.appendChild(CharacterCard);
 
