@@ -58,17 +58,21 @@ ul {
   }
 }
 
-.character {
+.character-wrapper {
   border-radius: 6px;
   box-shadow: 3px 3px 2px #000;
   background-color: #331c0f;
   overflow: hidden;
 }
 
+.character {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .character__portrait {
   height: auto;
-  aspect-ratio: 1/1;
-  object-fit: cover;
 }
 
 .character__portrait--reverse {
@@ -77,9 +81,10 @@ ul {
 
 .character__info {
   padding: 5px 15px 15px 15px;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   gap: 10px;
 }
 
@@ -93,13 +98,26 @@ ul {
   gap: 5px;
 }
 
+.character__text {
+  font-size: 1rem;
+}
+
+.character__emotes {
+  display: flex;
+  justify-content: space-between;
+}
+
 .character__state {
   display: flex;
-  flex-direction: row;
+  width: fit-content;
   gap: 5px;
   align-items: center;
 }
 
 .character__icon {
   width: fit-content;
+}
+
+.character__type {
+  font-size: 1.1rem;
 }
